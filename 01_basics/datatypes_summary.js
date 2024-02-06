@@ -35,3 +35,30 @@ const myFunction = function(){
     console.log("Hello World");
 }
 console.log(typeof myFunction);
+
+
+
+
+
+// #################################################################
+
+
+// Stack (primitive) , Heap (Non-primitive)
+
+let myName = "Linkan Kumar Rout";
+
+let myAnotherName = myName;
+myAnotherName = 'Linkan';
+console.log(myAnotherName);
+console.log(myName);
+
+
+let user1 = {
+    email: "user@gmail.com",
+    upi: "user@ybl"
+};
+let user2 = user1;
+user2.email = "linkan@gmail.com";
+
+console.log(user1.email);
+console.log(user2.email);
