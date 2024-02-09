@@ -6,6 +6,7 @@ let myArr = [1, 2, 3, 4, 5, 6];
 const myArr2 = new Array(1,2,3,4,5);
 // console.log(myArr2[1]);
 
+// ******************* Array methods ************************
 
 // myArr.push(7); // add one element to the last
 // console.log(myArr);
