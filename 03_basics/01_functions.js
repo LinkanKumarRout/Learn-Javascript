@@ -39,7 +39,7 @@ function loginUserMessage(username = "Sam"){
 // console.log(loginUserMessage("Linkan"));
 
 
-// using rest operator
+// using rest/spread operator
 
 function calculateCartPrice(...num){
     return num;
@@ -56,7 +56,7 @@ function handleObject(anyobject){
 }
 
 // handleObject(user);
-
+// we can also pass object inside our function like this
 handleObject(
     {
         username: "Sam",
