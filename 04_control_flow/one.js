@@ -7,7 +7,7 @@ if(isUserLoggedIn){
 
 // all comparision operator
 /*
-    <, >, <=, >=, ==, !=
+    <, >, <=, >=, ==, !=, ===
 */
 
 if (2 == "2"){
