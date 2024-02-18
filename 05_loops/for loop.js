@@ -17,13 +17,15 @@ for(let i = 1; i <= 10; i++){
         // console.log(`${i} * ${j} = ${i*j}`);
     }
 }
-
+// print last character of every word in an array
 let arr = ["flash", "batman", "superman"]
 console.log(arr.length)
 for(let index = 0; index < arr.length; index++){
     const element = arr[index];
-    console.log(element);
+    console.log(element[element.length-1]);
 }
+
+
 
 
 
