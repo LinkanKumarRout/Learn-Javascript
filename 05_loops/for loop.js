@@ -19,12 +19,30 @@ for(let i = 1; i <= 10; i++){
 }
 // print last character of every word in an array
 let arr = ["flash", "batman", "superman"]
-console.log(arr.length)
+// console.log(arr.length)
 for(let index = 0; index < arr.length; index++){
     const element = arr[index];
-    console.log(element[element.length-1]);
+    // console.log(element[element.length-1]);
 }
 
+// break & continue in JS
+
+for(let i = 1; i <= 10; i++){
+    if(i == 5){
+        // console.log(`5 Detected`);
+        break;
+    }
+    // console.log(`Value of i is ${i}`);
+}
+
+
+for(let i = 1; i <= 10; i++){
+    if(i == 5){
+        console.log(`5 Detected`);
+        continue;
+    }
+    console.log(`Value of i is ${i}`);
+}
 
 
 
