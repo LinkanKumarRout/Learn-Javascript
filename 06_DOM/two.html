@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Add Elements</title>
+</head>
+<body style="background-color: black; color: white;">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednessday</div>
+        <div class="day">Thursday</div>
+    </div>
+
+
+    <script>
+        let parent = document.querySelector(".parent");
+        // console.log(parent);
+        // console.log(parent.children);
+        // console.log(parent.children[1].innerHTML);
+
+        // for (let index = 0; index < parent.children.length; index++) {
+        //     console.log(parent.children[index].innerText);
+        // }
+
+        parent.children[1].style.color = "orange";
+        // console.log(parent.firstElementChild); // select first child element
+        // console.log(parent.lastElementChild); // select last child element
+
+        const dayOne = document.querySelector(".day");
+        // console.log(dayOne.parentElement); // select parent
+        // console.log(dayOne.nextElementSibling); // select next sibling
+
+
+        console.log("Nodes: ",parent.childNodes);
+    </script>
+</body>
+</html>
