@@ -16,10 +16,66 @@
         DOM - Document Object Model
 
         window ------ document ---- HTML ---- head & body
+
+        document.getElementById("title").className
+        heading
+
+        document.getElementById("title").id
+        'title'
+
+
+        let title = document.getElementById("title")
+        
+        title.textContent // this gives all text content available
+        'DOM learning on Chai aur Code test text.'
+
+        title.innerText  // this gives only those text which is not hidden
+        'DOM learning on Chai aur Code'
+
+        title.innerHTML
+        // it gives whole HTML available inside that node
+
+        document.querySelector("h2") // it gives us the first h2 element  in the body
+
+        document.querySelectorAll("li") // it selects all li tags
+        // it gives a node-list( this looks like array but not)
+
+        let first = document.querySelector("li")
+
+        first
+        <li>​…​</li>​::marker​"One"</li>​
+
+        document.querySelectorAll("li")[0].style.color = "green"
+        'green'
+
+        let allList = document.querySelectorAll("li")
+        allList.forEach(function(item){
+            item.style.color = "green";
+        })
+
+        let arr = document.getElementByClassName("list-item")
+        // arr is a HTMLCollection we can't use forEach on it in order to do that we have to convert
+        it to an array ----
+        let convertedArr = Array.from(arr);
+
     -->
     <div class="">
-        <h1 id="title" class="heading">DOM learning on Chai aur Code</h1>
+        <h1 id="title" class="heading">DOM learning on Chai aur Code <span style="display: none;">test text.</span></h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ad incidunt expedita dignissimos delectus animi aut, dolorem ex ipsam veniam.</p>
+        <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, quod.</h2>
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <h2>Lorem, ipsum dolor.</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel fugiat dicta veritatis nam.</p>
+
+        <input type="password" name="" id="" placeholder="Enter your password">
+        <input type="text" placeholder="Enter your name">
+
+        <ul>
+            <li class="list-item">One</li>
+            <li class="list-item">Two</li>
+            <li class="list-item">Three</li>
+            <li class="list-item">Four</li>
+        </ul>
     </div>
 </body>
 </html>
