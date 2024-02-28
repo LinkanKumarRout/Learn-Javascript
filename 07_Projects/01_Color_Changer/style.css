@@ -25,17 +25,29 @@ span {
     display: inline-block;
 }
   
-#grey {
-    background: grey;
+#violet {
+    background: violet;
 }
   
-#white {
-    background: white;
+#indigo {
+    background: indigo;
 }
 #blue {
     background: blue;
 }
+#green {
+    background: green;
+}
 #yellow {
     background: yellow;
+}
+#orange {
+    background: orange;
+}
+#red {
+    background: red;
+}
+#white {
+    background: white;
 }
   
