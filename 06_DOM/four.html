@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript DOM</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <ul class="language">
+        <li>Javascript</li>
+        <li>Node JS</li>
+    </ul>
+
+
+    <script>
+        // how to add a list item in the document using javascript
+        function addLanguage(langName){
+            const li = document.createElement('li');
+            li.innerHTML = `${langName}`;
+            document.querySelector('.language').appendChild(li);
+        }
+        addLanguage('Python');
+
+        function addOptiLanguage(langName){ // always use this type of approach
+            const li = document.createElement('li');
+            li.appendChild(document.createTextNode(langName)); // use appendChild instead of innerHTML
+            document.querySelector('.language').appendChild(li);
+        }
+        addOptiLanguage('Golang');
+
+        // Edit list item
+
+        const secondLang = document.querySelector("li:nth-child(2)"); // select second element
+        // secondLang.innerHTML = "mojo"
+        const newLi = document.createElement('li'); // create whole new list element
+        newLi.textContent = "Mojo";
+        secondLang.replaceWith(newLi); // replace new list item with old one
+
+        // Edit in another way
+
+        const firstLang = document.querySelector("li:first-child");
+        firstLang.outerHTML = '<li>Type-script</li>';
+
+        // Remove
+        const lastLang = document.querySelector('li:last-child');
+        lastLang.remove();
+
+    </script>
+</body>
+</html>
