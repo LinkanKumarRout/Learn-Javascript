@@ -1,0 +1,15 @@
+nav a{
+    color: aliceblue;
+}
+
+button {
+    cursor: pointer;
+    width: 4rem;
+    height: 2rem;
+    font-size: 1rem;
+}
+
+body{
+    color: aliceblue;
+    background-color: #414141;
+}
