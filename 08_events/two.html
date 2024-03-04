@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASYNC Project</title>
+</head>
+<body>
+    <h1>Linkan Kumar Rout</h1>
+    <button id="stop">stop</button>
+
+    <script>
+        // setTimeout() has a separate Queue in Browser API
+
+        // setTimeout(function(){ // after some time it run function one time only
+        //     console.log("Linkan");
+        // },2000);
+
+        const sayLinkan = function(){
+            console.log('Linkan');
+            document.querySelector('h1').innerHTML = "Name Changed";
+        }
+
+        let sayName = setTimeout(sayLinkan, 5000); // function will run after 5 sec
+
+        document.querySelector('#stop').addEventListener('click', function(e){
+            clearTimeout(sayName); // clear timeout given
+            console.log('Stopped')
+        })
+    </script>
+</body>
+</html>
