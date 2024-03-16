@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure and Lexical Scope</title>
+</head>
+<body>
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+
+    <script>
+        // const orangeButton = document.getElementById('orange');
+        // const greenButton = document.getElementById('green');
+
+        // orangeButton.addEventListener('click', () => {
+        //     document.body.style.backgroundColor = 'orange'
+        // })
+
+        // greenButton.addEventListener('click', () => {
+        //     document.body.style.backgroundColor = 'green'
+        // })
+        // if there is 1000 buttons then we have to do it in a different way
+
+        function clickhandler(color){
+            // document.body.style.backgroundColor = `${color}
+            return function(){
+                document.body.style.backgroundColor = `${color}`; // this is possible due to lexical scoping
+            }
+        }
+
+        document.getElementById('orange').onclick = clickhandler('orange'); // this is possible due to closure
+
+        document.getElementById('green').onclick = clickhandler('green');
+    </script>
+</body>
+</html>
