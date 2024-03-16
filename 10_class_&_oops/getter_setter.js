@@ -14,8 +14,17 @@ class User {
     set password(value){ // this will change the value but original value remains same
         this._password = value; // never use return in setter
     }
+
+    get email(){
+        return this._email.toUpperCase()
+    }
+
+    set email(value){
+        this._email = value
+    }
 }
 
 const linkan = new User('link@google.com', '123abc');
 
 console.log(linkan.password);
+console.log(linkan.email);
